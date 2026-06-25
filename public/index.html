@@ -103,8 +103,10 @@
   #nav{position:fixed;bottom:20px;right:26px;display:flex;gap:10px;z-index:30}
   .nbtn{background:rgba(128,128,128,.18);backdrop-filter:blur(8px);border:1px solid rgba(128,128,128,.3);color:#fff;width:42px;height:42px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
   #counter{position:fixed;bottom:28px;left:26px;color:rgba(140,140,140,.9);font-size:13px;z-index:30;font-variant-numeric:tabular-nums;font-weight:600}
-  #legend{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:15px;font-size:11.5px;color:rgba(140,140,140,.9);z-index:30;font-weight:600}
-  #legend span{display:flex;gap:6px;align-items:center} .dot{width:9px;height:9px;border-radius:50%}
+  .dot{width:9px;height:9px;border-radius:50%}
+  .statuskey{display:flex;gap:30px;flex-wrap:wrap;margin-top:1.6em}
+  .statuskey .ki{display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:600;color:var(--muted)}
+  .statuskey .ki b{color:var(--ink);font-weight:700}
 </style>
 </head>
 <body>
@@ -155,6 +157,11 @@
       <div class="colu"><span class="h">Reprodutível</span><p>Dados 100% públicos. Qualquer um refaz e chega no mesmo lugar.</p></div>
       <div class="colu"><span class="h">Comportamento ≠ intenção</span><p>Padrão Chainalysis. Mostramos padrões, não crime provado.</p></div>
       <div class="colu"><span class="h">Sem hype</span><p>Sem teoria conspiratória, sem previsão de preço, sem acusação sem prova.</p></div>
+    </div>
+    <div class="statuskey">
+      <span class="ki"><span class="dot" style="background:var(--mint)"></span> <b>Provado</b> — fato reproduzível</span>
+      <span class="ki"><span class="dot" style="background:var(--amber)"></span> <b>Hipótese</b> — padrão, não intenção</span>
+      <span class="ki"><span class="dot" style="background:var(--red)"></span> <b>Não afirmamos</b> — fora do que sustentamos</span>
     </div>
     <div class="note">Plateia séria confia em quem mostra o método antes do resultado. Não confie — verifique.</div>
   </section>
@@ -317,11 +324,6 @@
 </div>
 
 <div id="counter">01 / 16</div>
-<div id="legend">
-  <span><span class="dot" style="background:var(--mint)"></span>✅ provado</span>
-  <span><span class="dot" style="background:var(--amber)"></span>🟡/⚖️ hipótese</span>
-  <span><span class="dot" style="background:var(--red)"></span>❌ não afirmamos</span>
-</div>
 <div id="nav"><button class="nbtn" id="prev">‹</button><button class="nbtn" id="next">›</button></div>
 
 <script>
