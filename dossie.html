@@ -67,7 +67,8 @@
   @media(max-width:760px){.pillars{grid-template-columns:1fr 1fr}}
   @media print{body{background:#0e0e0e}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}#prog,#nav{display:none!important}}
   .team{display:flex;gap:26px;flex-wrap:wrap;margin:1.4em 0}
-  .member{text-align:center;width:120px}
+  .member{text-align:center;width:120px;display:block;text-decoration:none;color:inherit;border-bottom:none}
+  a.member:hover .pfp{border-color:var(--orange)}
   .pfp{width:84px;height:84px;border-radius:50%;margin:0 auto;display:grid;place-items:center;font-size:32px;font-weight:900;color:#0e0e0e;background:linear-gradient(135deg,#F7931A,#a9590b);overflow:hidden;border:2px solid var(--line)}
   .pfp img{width:100%;height:100%;object-fit:cover}
   .mn{font-weight:800;margin-top:11px;font-size:15px;color:var(--ink)}
@@ -228,11 +229,11 @@
   <h2>Colaboradores</h2>
   <p>Este estudo é coletivo — ombros de gigantes que abrem os dados:</p>
   <div class="team">
-    <div class="member"><div class="pfp">C</div><div class="mn">@Cryptolution</div><div class="mr">forense on-chain · Vincent</div></div>
-    <div class="member"><div class="pfp">D</div><div class="mn">dogdata.xyz</div><div class="mr">dados on-chain · API pública</div></div>
+    <a class="member" href="https://x.com/Cryptolution" target="_blank" rel="noopener"><div class="pfp"><img src="img/cryptolution.png" alt="Vincent Cryptolution"></div><div class="mn">@Cryptolution</div><div class="mr">forense on-chain · Vincent</div></a>
+    <a class="member" href="https://www.dogdata.xyz" target="_blank" rel="noopener"><div class="pfp"><img src="img/dogdata.png" alt="dogdata"></div><div class="mn">dogdata.xyz</div><div class="mr">dados on-chain · API pública</div></a>
     <div class="member"><div class="pfp">🐶</div><div class="mn">Dog Army</div><div class="mr">milhares de olhos na chain</div></div>
   </div>
-  <p class="src">As PFPs reais entram aqui — me envie as fotos dos colaboradores (@Cryptolution, dogdata e outros). Quer ser creditado? Contribua com dados/investigação.</p>
+  <p class="src">Clique nos avatares pra visitar. Quer ser creditado? Contribua com dados/investigação — abra um PR.</p>
 </section>
 
 </div>
