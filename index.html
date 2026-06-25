@@ -14,78 +14,94 @@
   html,body{height:100%}
   body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;overflow:hidden}
   #deck{height:100vh;width:100vw;position:relative}
-  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;
-    padding:6vh 9vw;opacity:0;transition:opacity .35s ease}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 9vw;opacity:0;transition:opacity .35s ease}
   .slide.active{display:flex;opacity:1}
   h1{font-size:clamp(40px,8vw,108px);font-weight:800;line-height:.98;letter-spacing:-.02em}
-  h2{font-size:clamp(26px,3.6vw,52px);font-weight:800;line-height:1.05;letter-spacing:-.01em;margin-bottom:.5em}
-  h2 .o{color:var(--orange)}
+  h2{font-size:clamp(24px,3.4vw,50px);font-weight:800;line-height:1.05;letter-spacing:-.01em;margin-bottom:.5em}
+  h2 .o,.o{color:var(--orange)}
   .lead{font-size:clamp(20px,2.4vw,34px);line-height:1.35;color:var(--ink);max-width:22ch}
   .sub{font-size:clamp(15px,1.6vw,22px);color:var(--muted);line-height:1.5;margin-top:1em;max-width:46ch}
-  .kicker{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:1.4em}
-  .big{font-size:clamp(64px,14vw,180px);font-weight:800;color:var(--orange);line-height:.9;letter-spacing:-.03em}
-  .row{display:flex;gap:18px;flex-wrap:wrap;margin-top:1.6em}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 24px;flex:1;min-width:180px}
-  .card .n{font-size:clamp(26px,3vw,40px);font-weight:800;color:var(--orange)}
+  .kicker{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:1.2em}
+  .big{font-size:clamp(60px,13vw,170px);font-weight:800;color:var(--orange);line-height:.9;letter-spacing:-.03em}
+  .row{display:flex;gap:18px;flex-wrap:wrap;margin-top:1.4em}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;flex:1;min-width:170px}
+  .card .n{font-size:clamp(24px,3vw,38px);font-weight:800;color:var(--orange)}
   .card .l{color:var(--muted);font-size:15px;margin-top:6px;line-height:1.4}
-  ul{list-style:none;margin-top:1.2em;display:flex;flex-direction:column;gap:14px}
-  li{font-size:clamp(17px,2vw,26px);line-height:1.35;display:flex;gap:14px;align-items:flex-start}
-  .tag{flex:none;font-weight:800;font-size:15px;padding:3px 9px;border-radius:7px;margin-top:4px}
+  ul{list-style:none;margin-top:1.1em;display:flex;flex-direction:column;gap:13px}
+  li{font-size:clamp(16px,1.9vw,25px);line-height:1.35;display:flex;gap:14px;align-items:flex-start}
+  .tag{flex:none;font-weight:800;font-size:15px;padding:3px 9px;border-radius:7px;margin-top:3px}
   .ok{background:rgba(70,196,144,.14);color:var(--mint)}
   .hyp{background:rgba(224,160,32,.15);color:var(--amber)}
   .no{background:rgba(224,96,74,.15);color:var(--red)}
-  .pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.6em}
+  .pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.4em}
   .pill{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:clamp(14px,1.5vw,19px);font-weight:600}
   .pill.o{border-color:rgba(247,147,26,.4);color:var(--orange)}
-  /* STH/LTH bar */
-  .bar{display:flex;height:110px;border-radius:14px;overflow:hidden;margin-top:1.4em;border:1px solid var(--line)}
+  .bar{display:flex;height:92px;border-radius:14px;overflow:hidden;margin-top:1.2em;border:1px solid var(--line)}
   .seg{display:flex;flex-direction:column;justify-content:center;align-items:center;color:#0a0a0a;font-weight:800}
   .seg.sth{background:var(--mint);flex:17.59}
   .seg.lth{background:var(--orange);flex:82.41}
-  .seg .p{font-size:clamp(22px,3vw,40px)}
-  .seg .t{font-size:13px;opacity:.8;font-weight:700}
-  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:1.4em}
-  .col{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .seg .p{font-size:clamp(20px,2.6vw,36px)}
+  .seg .t{font-size:13px;opacity:.85;font-weight:700}
+  /* HODL waves */
+  .waves{margin-top:1.2em;display:flex;flex-direction:column;gap:9px}
+  .wrow{display:flex;align-items:center;gap:14px;font-size:clamp(13px,1.4vw,17px)}
+  .wlab{width:96px;flex:none;color:var(--muted);text-align:right}
+  .wbar{flex:1;background:#1c1c1c;border-radius:6px;overflow:hidden;height:22px}
+  .wbar i{display:block;height:100%;background:linear-gradient(90deg,#7a4a0e,var(--orange));border-radius:6px}
+  .wval{width:58px;flex:none;font-weight:700;color:var(--ink)}
+  /* MVRV donut */
+  .mvrv{display:flex;align-items:center;gap:42px;flex-wrap:wrap;margin-top:1em}
+  .donut{width:230px;height:230px;border-radius:50%;flex:none;display:grid;place-items:center;
+    background:conic-gradient(var(--red) 0 77.5%, var(--mint) 77.5% 100%)}
+  .donut .hole{width:150px;height:150px;border-radius:50%;background:var(--bg);display:grid;place-items:center;text-align:center}
+  .donut .hv{font-size:34px;font-weight:800;color:var(--red)} .donut .hl{font-size:12px;color:var(--muted)}
+  .leg{display:flex;flex-direction:column;gap:14px;font-size:clamp(16px,1.8vw,22px)}
+  .leg .k{display:flex;gap:10px;align-items:center} .sw{width:14px;height:14px;border-radius:4px}
+  /* cluster graph */
+  .graph{margin-top:.6em}
+  .gnote{color:var(--muted);font-size:14px;margin-top:.4em}
+  /* ghost wall */
+  .book{margin-top:1.1em;display:flex;align-items:flex-end;gap:6px;height:150px;background:#121212;border:1px solid var(--line);border-radius:14px;padding:16px}
+  .ord{flex:1;background:#2a2a2a;border-radius:4px 4px 0 0}
+  .ord.ghost{background:linear-gradient(180deg,var(--red),#7a2418);animation:flick 2.6s infinite}
+  @keyframes flick{0%,18%{opacity:.95;height:90%}22%,40%{opacity:0;height:90%}44%,62%{opacity:.95;height:90%}66%,100%{opacity:0;height:90%}}
+  .booklab{display:flex;justify-content:space-between;margin-top:8px;font-size:13px;color:var(--muted)}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:1.2em}
+  .col{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
   .col h3{font-size:clamp(18px,2vw,26px);margin-bottom:.5em}
   .col.good h3{color:var(--mint)} .col.bad h3{color:var(--amber)}
   .col p{color:var(--muted);font-size:16px;line-height:1.5}
-  .note{margin-top:1.4em;font-size:14px;color:var(--muted);border-left:2px solid var(--orange);padding-left:14px;line-height:1.5;max-width:60ch}
-  .src{margin-top:1.1em;font-size:12.5px;color:#5f5b50;letter-spacing:.02em}
+  .note{margin-top:1.2em;font-size:14px;color:var(--muted);border-left:2px solid var(--orange);padding-left:14px;line-height:1.5;max-width:62ch}
+  .src{margin-top:.9em;font-size:12.5px;color:#5f5b50}
   .badge{display:inline-block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;margin-top:2em;width:fit-content}
-  .author{margin-top:2.4em;color:var(--muted);font-size:16px}
-  .author b{color:var(--ink)}
-  /* chrome */
+  .author{margin-top:2.2em;color:var(--muted);font-size:16px} .author b{color:var(--ink)}
   #prog{position:fixed;top:0;left:0;height:3px;background:var(--orange);z-index:20;transition:width .3s}
-  #nav{position:fixed;bottom:22px;right:28px;display:flex;gap:10px;align-items:center;z-index:20}
+  #nav{position:fixed;bottom:22px;right:28px;display:flex;gap:10px;z-index:20}
   .nbtn{background:var(--panel);border:1px solid var(--line);color:var(--ink);width:42px;height:42px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
   .nbtn:hover{border-color:var(--orange)}
   #counter{position:fixed;bottom:30px;left:28px;color:var(--muted);font-size:14px;z-index:20;font-variant-numeric:tabular-nums}
   #legend{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:16px;font-size:12px;color:var(--muted);z-index:20}
-  #legend span{display:flex;gap:6px;align-items:center}
-  .dot{width:9px;height:9px;border-radius:50%}
-  @media(max-width:760px){.twocol{grid-template-columns:1fr}#legend{display:none}}
+  #legend span{display:flex;gap:6px;align-items:center} .dot{width:9px;height:9px;border-radius:50%}
+  @media(max-width:760px){.twocol{grid-template-columns:1fr}#legend{display:none}.mvrv{gap:24px}}
 </style>
 </head>
 <body>
 <div id="prog"></div>
 <div id="deck">
 
-  <!-- 1 -->
   <section class="slide active">
     <div class="kicker">Relatório de Transparência On-Chain</div>
-    <h1>$DOG<span style="color:var(--orange)">.</span></h1>
+    <h1>$DOG<span class="o">.</span></h1>
     <div class="lead" style="margin-top:.4em">Float, estrutura de holders e microestrutura de mercado.</div>
     <div class="author">Por <b>@dogdamassa</b> · Junho 2026</div>
     <div class="badge">Pesquisa reproduzível · não é conselho financeiro</div>
   </section>
 
-  <!-- 2 -->
   <section class="slide">
     <h2>A $DOG é <span class="o">o que o crypto deveria ser</span> — e os dados provam.</h2>
     <div class="sub">Sem dono. Sem VC. 100% airdrop. A convicção está on-chain; os jogos estão nas corretoras.</div>
   </section>
 
-  <!-- 3 -->
   <section class="slide">
     <div class="kicker">A fundação · ✅ provado</div>
     <h2>O que é a $DOG</h2>
@@ -95,10 +111,9 @@
       <div class="card"><div class="n">CC0</div><div class="l">sem dono · sem pré-venda · sem insider</div></div>
       <div class="card"><div class="n">0,008%</div><div class="l">parte do fundador</div></div>
     </div>
-    <div class="note">Um ativo verdadeiramente sem dono, fiel ao ideal original do Bitcoin. Essa é a base de credibilidade.</div>
+    <div class="note">Um ativo verdadeiramente sem dono, fiel ao ideal original do Bitcoin. A base de credibilidade.</div>
   </section>
 
-  <!-- 4 -->
   <section class="slide">
     <h2>Por que este estudo</h2>
     <div class="lead">A comunidade é convicta. Então por que o mercado parece manipulado?</div>
@@ -108,19 +123,17 @@
     </div>
   </section>
 
-  <!-- 5 -->
   <section class="slide">
     <div class="kicker">O escudo · credibilidade primeiro</div>
     <h2>Metodologia &amp; princípio</h2>
     <div class="pills">
       <div class="pill o">Dados 100% públicos · qualquer um refaz</div>
       <div class="pill o">Comportamento ≠ intenção (padrão Chainalysis)</div>
-      <div class="pill o">Sem teoria conspiratória · sem previsão de preço</div>
+      <div class="pill o">Sem conspiração · sem previsão de preço</div>
     </div>
     <div class="note">Plateia séria confia em quem mostra o método antes do resultado. Tudo aqui é reproduzível — não confie, verifique.</div>
   </section>
 
-  <!-- 6 -->
   <section class="slide">
     <div class="kicker">Achado 1 · ✅ provado</div>
     <h2>Float fino, mãos fortes</h2>
@@ -128,60 +141,74 @@
       <div class="seg sth"><div class="p">17,6%</div><div class="t">STH &lt;155d</div></div>
       <div class="seg lth"><div class="p">82,4%</div><div class="t">LTH ≥155 dias</div></div>
     </div>
-    <div class="row">
-      <div class="card"><div class="n">59,5%</div><div class="l">do supply parado há +1 ano</div></div>
-      <div class="card"><div class="n">575d</div><div class="l">idade mediana de um UTXO</div></div>
-      <div class="card"><div class="n">~70–80%</div><div class="l">soberano (excluindo exchanges)</div></div>
+    <div class="waves">
+      <div class="wrow"><span class="wlab">&gt; 1 ano</span><span class="wbar"><i style="width:100%"></i></span><span class="wval">59,5%</span></div>
+      <div class="wrow"><span class="wlab">180–365d</span><span class="wbar"><i style="width:33.8%"></i></span><span class="wval">20,1%</span></div>
+      <div class="wrow"><span class="wlab">90–180d</span><span class="wbar"><i style="width:15.2%"></i></span><span class="wval">9,0%</span></div>
+      <div class="wrow"><span class="wlab">30–90d</span><span class="wbar"><i style="width:11.3%"></i></span><span class="wval">6,7%</span></div>
+      <div class="wrow"><span class="wlab">&lt; 30d</span><span class="wbar"><i style="width:7.7%"></i></span><span class="wval">4,6%</span></div>
     </div>
-    <div class="src">Fonte reproduzível: dogdata.xyz/api/metrics/utxo-age</div>
+    <div class="src">HODL waves · % do supply por idade de UTXO · fonte: dogdata.xyz/api/metrics/utxo-age</div>
   </section>
 
-  <!-- 7 -->
   <section class="slide">
     <div class="kicker">Achado 2 · ✅ o coração da tese</div>
     <h2>Convicção provada por dado</h2>
-    <div style="display:flex;align-items:baseline;gap:24px;flex-wrap:wrap">
-      <div class="big">77,5%</div>
-      <div class="lead">do supply está holdado <b style="color:var(--ink)">em prejuízo</b> — e mesmo assim 82% é mão de longo prazo.</div>
+    <div class="mvrv">
+      <div class="donut"><div class="hole"><div><div class="hv">77,5%</div><div class="hl">em prejuízo</div></div></div></div>
+      <div class="leg">
+        <div class="k"><span class="sw" style="background:var(--red)"></span> 77,5% do supply <b>no vermelho</b></div>
+        <div class="k"><span class="sw" style="background:var(--mint)"></span> 22,5% no lucro</div>
+        <div class="k"><span class="o" style="font-weight:800">MVRV 0,22</span> — e mesmo assim <b>82% é LTH</b>.</div>
+      </div>
     </div>
-    <div class="sub">MVRV 0,22. Gente no -70% e não vende. <b style="color:var(--orange)">Apanha e não vende.</b> Isso é convicção, em número.</div>
+    <div class="note"><b>Apanha e não vende.</b> Gente no -70% e segurando há mais de um ano. Isso é convicção, em número — a comunidade mais fiel do crypto.</div>
   </section>
 
-  <!-- 8 -->
   <section class="slide">
     <div class="kicker">Achado 3 · forense de carteiras</div>
     <h2>Quem move o quê</h2>
+    <svg class="graph" viewBox="0 0 720 200" width="100%" height="190" font-family="inherit">
+      <line x1="120" y1="100" x2="300" y2="100" stroke="#3a3a3a" stroke-width="2" stroke-dasharray="5 5"/>
+      <line x1="380" y1="100" x2="560" y2="100" stroke="var(--mint)" stroke-width="3"/>
+      <text x="430" y="88" fill="var(--mint)" font-size="13" font-weight="700">co-gasto ×8</text>
+      <text x="200" y="88" fill="var(--muted)" font-size="13">só saques →</text>
+      <g><circle cx="80" cy="100" r="42" fill="#1a1a1a" stroke="var(--amber)" stroke-width="2"/><text x="80" y="96" fill="var(--ink)" font-size="13" text-anchor="middle" font-weight="700">Binance</text><text x="80" y="114" fill="var(--muted)" font-size="11" text-anchor="middle">saldo ~0</text></g>
+      <g><circle cx="340" cy="100" r="46" fill="#1a1a1a" stroke="var(--orange)" stroke-width="2"/><text x="340" y="96" fill="var(--ink)" font-size="14" text-anchor="middle" font-weight="800">MM2</text><text x="340" y="115" fill="var(--muted)" font-size="11" text-anchor="middle">2,05B</text></g>
+      <g><circle cx="600" cy="100" r="46" fill="#1a1a1a" stroke="var(--orange)" stroke-width="2"/><text x="600" y="96" fill="var(--ink)" font-size="14" text-anchor="middle" font-weight="800">Whale7</text><text x="600" y="115" fill="var(--muted)" font-size="11" text-anchor="middle">1,15B</text></g>
+    </svg>
     <ul>
-      <li><span class="tag ok">✅ PROVA</span> Duas carteiras grandes (~3,2%) são o <b>mesmo dono</b> — provado por co-gasto (common-input-ownership).</li>
-      <li><span class="tag hyp">🟡 PADRÃO</span> Wash trading no cluster (compra e vende quantias quase iguais).</li>
-      <li><span class="tag no">❌ NÃO</span> "A Binance controla 13%": <b>não se sustenta.</b> A carteira Binance tem saldo ~0 — é custódia/pass-through, não acúmulo.</li>
+      <li><span class="tag ok">✅</span> MM2 + Whale7 = <b>mesmo dono</b> (co-gasto, ~3,2% do supply).</li>
+      <li><span class="tag no">❌</span> "Binance controla 13%": <b>não se sustenta</b> — saldo ~0, é custódia/pass-through.</li>
     </ul>
   </section>
 
-  <!-- 9 -->
   <section class="slide">
-    <div class="kicker">Achado 4 · 🟡 microestrutura de mercado</div>
+    <div class="kicker">Achado 4 · 🟡 microestrutura</div>
     <h2>Spoofing nos order books</h2>
+    <div class="book">
+      <div class="ord" style="height:30%"></div><div class="ord" style="height:22%"></div>
+      <div class="ord ghost" style="flex:2"></div>
+      <div class="ord" style="height:18%"></div><div class="ord" style="height:26%"></div>
+      <div class="ord" style="height:15%"></div><div class="ord" style="height:20%"></div>
+    </div>
+    <div class="booklab"><span>order book (Bitget) — ao vivo</span><span class="o">a parede fantasma aparece e some ⤴</span></div>
     <ul>
-      <li><span class="tag ok">✅</span> Liquidez finíssima: <b>~$1,2M/dia</b> num mcap de $58M. Trivialmente manipulável.</li>
-      <li><span class="tag hyp">🟡</span> <b>Bitget:</b> ordem fantasma de ~$2.715 (≈90% do book), <b>flicker até 33× e nunca executou</b> = padrão de layering.</li>
-      <li><span class="tag hyp">🟡</span> <b>Kraken:</b> paredes de $10k que somem sem executar.</li>
+      <li><span class="tag hyp">🟡</span> <b>Bitget:</b> ordem de ~$2.715 (≈90% do book), <b>flicker 33× e nunca executou</b>.</li>
+      <li><span class="tag ok">✅</span> Reframe: está na <b>Bitget/Kraken</b> (que listam DOG), <b>não na Binance</b>.</li>
     </ul>
-    <div class="note">Reframe honesto: o spoofing está nas exchanges que <b>listam</b> DOG (Bitget/Kraken) — <b>não na Binance</b> (que não lista DOG spot). A evidência aponta pra onde aponta.</div>
   </section>
 
-  <!-- 10 -->
   <section class="slide">
     <div class="kicker">A saga Binance · ✅ a versão real</div>
     <h2>Valores vs. <span class="o">pay-to-play</span></h2>
     <ul>
-      <li><span class="tag ok">✅</span> <b>Set/2024:</b> o projeto pediu listagem na Binance <b>recusando pagar taxa ou dar market makers.</b> Não foi listado.</li>
-      <li><span class="tag ok">✅</span> <b>10/10/2025:</b> a Binance <b>admitiu</b> a falha de oráculo, pagou ~$283M e <b>mudou a metodologia</b> = admissão tácita.</li>
+      <li><span class="tag ok">✅</span> <b>Set/2024:</b> o projeto pediu listagem <b>recusando pagar taxa ou dar market makers.</b> Não foi listado.</li>
+      <li><span class="tag ok">✅</span> <b>10/10/2025:</b> a Binance <b>admitiu</b> a falha de oráculo, pagou ~$283M e <b>mudou a metodologia</b>.</li>
     </ul>
     <div class="note">A história forte é verdadeira e simpática — não precisa de vilão invisível.</div>
   </section>
 
-  <!-- 11 -->
   <section class="slide">
     <div class="kicker">A inspiração</div>
     <h2>GameStop: a alma, não a fórmula</h2>
@@ -189,10 +216,9 @@
       <li><span class="tag ok">✅</span> O <b>espírito mapeia 100%:</b> varejo convicto + transparência + comunidade leal virando o jogo contra instituições opacas.</li>
       <li><span class="tag ok">🔑</span> A ferramenta real: <b>auto-custódia = o "DRS do crypto"</b> — tira o float do controle das CEX.</li>
     </ul>
-    <div class="note">A mecânica de squeeze de <i>ações</i> não existe igual no spot. Então a força não vem de "espremer shorts" — vem de <b>soberania + verdade</b>. Mais forte, e ninguém reverte nem processa.</div>
+    <div class="note">A mecânica de squeeze de <i>ações</i> não existe igual no spot. A força não vem de "espremer shorts" — vem de <b>soberania + verdade</b>. Mais forte, e ninguém reverte nem processa.</div>
   </section>
 
-  <!-- 11a · Casey -->
   <section class="slide">
     <div class="kicker">Quem abriu a porta</div>
     <h2>Casey Rodarmor mudou o jogo <span class="o">pra sempre</span></h2>
@@ -203,18 +229,16 @@
     <div class="note">A ideia simples e poderosa: <b>eternizar algo na maior blockchain de todas.</b> Casey democratizou o Bitcoin — e isso é irreversível.</div>
   </section>
 
-  <!-- 11b · BIP-110 -->
   <section class="slide">
     <div class="kicker">A ameaça · ⚖️ debate aberto</div>
     <h2>BIP-110: querem <span class="o">permissão</span> pro que foi feito pra <span class="o">libertar</span></h2>
     <ul>
-      <li><span class="tag hyp">⚖️</span> <b>O que é:</b> proposta (Luke Dashjr / Bitcoin Knots) pra <b>limitar dados não-monetários</b> no Bitcoin — mira Ordinals e Runes.</li>
-      <li><span class="tag ok">✅</span> <b>Os fatos:</b> os mineradores são <b>contra</b> (perdem taxa); Adam Back nega ser censura; a sinalização está longe do limiar.</li>
+      <li><span class="tag hyp">⚖️</span> <b>O que é:</b> proposta (Luke Dashjr / Bitcoin Knots) pra <b>limitar dados não-monetários</b> — mira Ordinals e Runes.</li>
+      <li><span class="tag ok">✅</span> <b>Os fatos:</b> mineradores são <b>contra</b> (perdem taxa); Adam Back nega ser censura; a sinalização está longe do limiar.</li>
     </ul>
-    <div class="note">💭 <b>A crítica:</b> o Bitcoin foi feito pra ser <b>sem permissão</b>. Se você paga as taxas, o espaço é seu. Os velhos maximalistas querem instalar um <b>porteiro</b> num sistema desenhado justamente pra não ter porteiro — censurar o que pessoas livres escolhem eternizar é trair o DNA do Bitcoin. A história raramente fica do lado de quem tenta fechar a porta.</div>
+    <div class="note">💭 <b>A crítica:</b> o Bitcoin foi feito pra ser <b>sem permissão</b>. Os velhos maximalistas querem instalar um <b>porteiro</b> num sistema desenhado pra não ter porteiro — censurar o que pessoas livres escolhem eternizar é trair o DNA do Bitcoin. A história raramente fica do lado de quem tenta fechar a porta.</div>
   </section>
 
-  <!-- 12 -->
   <section class="slide">
     <h2>Estratégia: <span class="o">Transparência Radical</span></h2>
     <div class="row">
@@ -226,7 +250,6 @@
     </div>
   </section>
 
-  <!-- 13 -->
   <section class="slide">
     <div class="kicker">O escudo · ⚖️</div>
     <h2>Ética &amp; limites</h2>
@@ -234,11 +257,10 @@
       <li><span class="tag ok">✅</span> Publicar <b>fato reproduzível</b>, nunca acusação de intenção.</li>
       <li><span class="tag hyp">⚖️</span> Comportamento ≠ intenção provada.</li>
       <li><span class="tag no">🇧🇷</span> Lei brasileira difere — <b>consultar advogado</b> antes de acusação nominal.</li>
-      <li><span class="tag no">🚫</span> Nada de coordenar compra/venda pra mover preço. Isso é manipulação — vira o que se combate.</li>
+      <li><span class="tag no">🚫</span> Nada de coordenar preço. Isso é manipulação — vira o que se combate.</li>
     </ul>
   </section>
 
-  <!-- 14 -->
   <section class="slide">
     <h2>Chamada à ação</h2>
     <div class="pills">
@@ -246,10 +268,9 @@
       <div class="pill o">🔑 Auto-custódia — traga seu DOG pra casa</div>
       <div class="pill o">⚖️ Cobre accountability com recibo</div>
     </div>
-    <div class="lead" style="margin-top:1.6em">Verdade + soberania <b style="color:var(--orange)">ninguém reverte, nem processa.</b></div>
+    <div class="lead" style="margin-top:1.4em">Verdade + soberania <b class="o">ninguém reverte, nem processa.</b></div>
   </section>
 
-  <!-- 15 -->
   <section class="slide">
     <div class="kicker">Reprodutibilidade</div>
     <h2>"Não confie — <span class="o">verifique.</span>"</h2>
@@ -263,16 +284,13 @@
 
 </div>
 
-<div id="counter">01 / 15</div>
+<div id="counter">01 / 18</div>
 <div id="legend">
   <span><span class="dot" style="background:var(--mint)"></span>✅ provado</span>
-  <span><span class="dot" style="background:var(--amber)"></span>🟡 hipótese</span>
+  <span><span class="dot" style="background:var(--amber)"></span>🟡/⚖️ hipótese</span>
   <span><span class="dot" style="background:var(--red)"></span>❌ não afirmamos</span>
 </div>
-<div id="nav">
-  <button class="nbtn" id="prev">‹</button>
-  <button class="nbtn" id="next">›</button>
-</div>
+<div id="nav"><button class="nbtn" id="prev">‹</button><button class="nbtn" id="next">›</button></div>
 
 <script>
   const slides=[...document.querySelectorAll('.slide')];
@@ -291,7 +309,6 @@
     if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);
     if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);
   });
-  // touch swipe
   let x0=null;
   document.addEventListener('touchstart',e=>x0=e.touches[0].clientX);
   document.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(i+(dx<0?1:-1));x0=null;});
