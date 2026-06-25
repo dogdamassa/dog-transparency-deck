@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$DOG — Galeria de Artes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  body{background:#0e0e0e;color:#f1ece1;font-family:"Inter",system-ui,sans-serif;margin:0;padding:6vw}
+  h1{font-size:clamp(26px,4vw,46px);font-weight:900;letter-spacing:-.02em;margin:0}
+  h1 span{color:#F7931A}
+  p{color:#928c7e;margin:.5em 0 2em;font-size:15px}
+  code{color:#F7931A;font-family:ui-monospace,Menlo,monospace}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+  .card{background:#161616;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden}
+  .card img{width:100%;height:250px;object-fit:cover;display:block;background:#000}
+  .card .n{padding:11px 14px;font-size:13px;color:#f1ece1;font-weight:600}
+  .card .f{font-size:11px;color:#928c7e;font-family:ui-monospace,Menlo,monospace}
+</style>
+</head>
+<body>
+  <h1>Galeria de artes <span>$DOG</span></h1>
+  <p>7 artes da DOG em <code>public/</code> (já limpei as que não eram DOG). Me diz qual usar em cada seção.</p>
+  <div class="grid">
+    <div class="card"><img src="dog1.png" alt=""><div class="n">Dog hoodie · corpo inteiro<div class="f">dog1.png</div></div></div>
+    <div class="card"><img src="dog2.png" alt=""><div class="n">Dog hoodie · espiando<div class="f">dog2.png</div></div></div>
+    <div class="card"><img src="dog3.png" alt=""><div class="n">Dog hoodie · escondido<div class="f">dog3.png</div></div></div>
+    <div class="card"><img src="dog4.png" alt=""><div class="n">Dog · só a cabeça<div class="f">dog4.png</div></div></div>
+    <div class="card"><img src="dog-green.png" alt=""><div class="n">Dog verde · meditando<div class="f">dog-green.png</div></div></div>
+    <div class="card"><img src="gen3.png" alt=""><div class="n">Dog no olho da cédula<div class="f">gen3.png</div></div></div>
+    <div class="card"><img src="gen4.png" alt=""><div class="n">"$500M Liquidados" (news)<div class="f">gen4.png</div></div></div>
+  </div>
+</body>
+</html>
