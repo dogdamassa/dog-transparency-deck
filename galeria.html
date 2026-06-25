@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$DOG — Galeria de Artes (public/)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+  body{background:#0e0e0e;color:#f1ece1;font-family:"Inter",system-ui,sans-serif;margin:0;padding:6vw}
+  h1{font-size:clamp(26px,4vw,46px);font-weight:900;letter-spacing:-.02em;margin:0}
+  h1 span{color:#F7931A}
+  p{color:#928c7e;margin:.5em 0 2em;font-size:15px}
+  code{color:#F7931A;font-family:ui-monospace,Menlo,monospace}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+  .card{background:#161616;border:1px solid #2a2a2a;border-radius:14px;overflow:hidden}
+  .card img{width:100%;height:250px;object-fit:cover;display:block;background:#000}
+  .card .n{padding:11px 14px;font-size:13px;color:#F7931A;font-family:ui-monospace,Menlo,monospace;border-top:1px solid #2a2a2a}
+</style>
+</head>
+<body>
+  <h1>Galeria de artes <span>$DOG</span></h1>
+  <p>11 imagens agora em <code>public/</code>. Me diga qual usar em cada seção do estudo — ou se alguma não é DOG e devo remover.</p>
+  <div class="grid">
+    <div class="card"><img src="public/dog1.png" alt=""><div class="n">dog1.png</div></div>
+    <div class="card"><img src="public/dog2.png" alt=""><div class="n">dog2.png</div></div>
+    <div class="card"><img src="public/dog3.png" alt=""><div class="n">dog3.png</div></div>
+    <div class="card"><img src="public/dog4.png" alt=""><div class="n">dog4.png</div></div>
+    <div class="card"><img src="public/dog-green.png" alt=""><div class="n">dog-green.png</div></div>
+    <div class="card"><img src="public/gen1.png" alt=""><div class="n">gen1.png</div></div>
+    <div class="card"><img src="public/gen2.png" alt=""><div class="n">gen2.png</div></div>
+    <div class="card"><img src="public/gen3.png" alt=""><div class="n">gen3.png</div></div>
+    <div class="card"><img src="public/gen4.png" alt=""><div class="n">gen4.png</div></div>
+    <div class="card"><img src="public/image-a.png" alt=""><div class="n">image-a.png</div></div>
+    <div class="card"><img src="public/image-b.png" alt=""><div class="n">image-b.png</div></div>
+  </div>
+</body>
+</html>
